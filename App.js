@@ -1,22 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+/* -------------------------------------------------------------------------- */
+/*                                Dependencies                                */
+/* -------------------------------------------------------------------------- */
+// Packages
+import { StyleSheet } from "react-native";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
+// Local Components
+import HomeScreen from "./screens/HomeScreen";
+
+/**
+ * App is the root component of the application
+ */
 export default function App() {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <HomeScreen />
     </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
